@@ -284,9 +284,9 @@
 			function getImage() {
 				mui.plusReady(function(){
              // 在这里调用plus api
-					var c = plus.camera.getCamera();
+					var c = mui.os.plus.camera.getCamera();
 					c.captureImage(function(e) {
-						plus.io.resolveLocalFileSystemURL(e, function(entry) {
+						mui.os.plus.io.resolveLocalFileSystemURL(e, function(entry) {
 							var s = entry.toLocalURL() + "?version=" + new Date().getTime();
 							console.log(s);
 							document.getElementById("head-img").src = s;
