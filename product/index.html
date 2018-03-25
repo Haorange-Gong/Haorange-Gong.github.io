@@ -200,6 +200,7 @@
 		<script src="js/mui.previewimage.js"></script>
 		<!--<script src='js/feedback.js'></script>-->
 		<script>
+			mui.init();
 			mui('#showRegion').on('tap', 'a', function() {
 				mui('#region').popover('show');
 			});
@@ -281,24 +282,26 @@
 //			});
 
 			function getImage() {
-				var c = plus.camera.getCamera();
-				alert(1);
-				c.captureImage(function(e) {
-					plus.io.resolveLocalFileSystemURL(e, function(entry) {
-						var s = entry.toLocalURL() + "?version=" + new Date().getTime();
-						console.log(s);
-						document.getElementById("head-img").src = s;
-						//变更大图预览的src
-						//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
-//						document.querySelector("#__mui-imageview__group .mui-slider-item img").src = s + "?version=" + new Date().getTime();;;
-					}, function(e) {
-						console.log("读取拍照文件错误：" + e.message);
-					});
-				}, function(s) {
-					console.log("error" + s);
-				}, {
-					filename: "_doc/head.jpg"
-				})
+				mui.plusReady(function(){
+             // 在这里调用plus api
+					var c = plus.camera.getCamera();
+					c.captureImage(function(e) {
+						plus.io.resolveLocalFileSystemURL(e, function(entry) {
+							var s = entry.toLocalURL() + "?version=" + new Date().getTime();
+							console.log(s);
+							document.getElementById("head-img").src = s;
+							//变更大图预览的src
+							//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+	//						document.querySelector("#__mui-imageview__group .mui-slider-item img").src = s + "?version=" + new Date().getTime();;;
+						}, function(e) {
+							console.log("读取拍照文件错误：" + e.message);
+						});
+					}, function(s) {
+						console.log("error" + s);
+					}, {
+						filename: "_doc/head.jpg"
+					})
+				});
 			}
 
 			function galleryImg() {
