@@ -252,36 +252,37 @@
 				});
 			})(mui);
 			//上传照片
-			mui(".upload-box").on("tap", "#upload", function(e) {
-				if(mui.os.plus) {
-					var a = [{
-						title: "拍照"
-					}, {
-						title: "从手机相册选择"
-					}];
-					plus.nativeUI.actionSheet({
-						cancel: "取消",
-						buttons: a
-					}, function(b) {
-						switch(b.index) {
-							case 0:
-								break;
-							case 1:
-								getImage();
-								break;
-							case 2:
-								galleryImg();
-								break;
-							default:
-								break
-						}
-					})
-				}
-
-			});
+//			mui(".upload-box").on("tap", "#upload", function(e) {
+//				if(mui.os.plus) {
+//					var a = [{
+//						title: "拍照"
+//					}, {
+//						title: "从手机相册选择"
+//					}];
+//					plus.nativeUI.actionSheet({
+//						cancel: "取消",
+//						buttons: a
+//					}, function(b) {
+//						switch(b.index) {
+//							case 0:
+//								break;
+//							case 1:
+//								getImage();
+//								break;
+//							case 2:
+//								galleryImg();
+//								break;
+//							default:
+//								break
+//						}
+//					})
+//				}
+//
+//			});
 
 			function getImage() {
 				var c = plus.camera.getCamera();
+				alert(1);
 				c.captureImage(function(e) {
 					plus.io.resolveLocalFileSystemURL(e, function(entry) {
 						var s = entry.toLocalURL() + "?version=" + new Date().getTime();
