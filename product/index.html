@@ -43,7 +43,8 @@
 					<label>罚单照片</label>
 					<div id='upload' class="upload-img">
 						<img src="images/upload.png" alt="" />
-						<p class="mui-text-muted">上传照片</p>
+						<!--<p href="#picture" class="mui-text-muted">上传照片</p>-->
+						<a href="#picture" class="mui-btn mui-btn-primary mui-btn-block mui-btn-outlined" style="padding: 5px 20px;">打开actionsheet</a>
 					</div>
 					<div class="image-item">
 						<img id="head-img" src="images/img.jpg"  data-preview-src="" data-preview-group="1" />
@@ -74,6 +75,21 @@
 				<li class="mui-table-view-cell">滞纳金：200元</li>
 				<li class="mui-table-view-cell">手续费：10元</li>
 				<li class="mui-table-view-cell">滞纳金说明：15天以后每天产生百分之三的滞纳金</li>
+			</ul>
+		</div>
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#" onclick="getImage()">拍照</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#" onclick="galleryImg()">相册</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture"><b>取消</b></a>
+				</li>
 			</ul>
 		</div>
 		<!--选择自治区开始-->
@@ -182,7 +198,7 @@
 		<script src="js/mui.dtpicker.js"></script>
 		<script src="js/mui.zoom.js"></script>
 		<script src="js/mui.previewimage.js"></script>
-		<script src='js/feedback.js'></script>
+		<!--<script src='js/feedback.js'></script>-->
 		<script>
 			mui('#showRegion').on('tap', 'a', function() {
 				mui('#region').popover('show');
