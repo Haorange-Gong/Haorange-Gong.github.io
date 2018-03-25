@@ -1,0 +1,553 @@
+.text-warning {
+	color: #f77c40;
+}
+
+.text-yellow {
+	color: #fec72f;
+}
+
+.text-muted {
+	color: #969696;
+}
+
+.text-grey {
+	color: #727272;
+}
+
+.text-red {
+	color: #ff4549;
+}
+
+.text-black {
+	color: #313131;
+}
+
+.text-success {
+	color: #0abb08;
+}
+
+.text-white {
+	color: #fff;
+}
+
+.m-t-5 {
+	margin-top: 0.12rem;
+}
+
+.m-t-10 {
+	margin-top: 0.25rem;
+}
+
+.m-t-12 {
+	margin-top: 0.3rem;
+}
+
+.m-t-20 {
+	margin-top: 0.5rem;
+}
+
+.m-l-7 {
+	margin-left: 0.17rem;
+}
+
+.m-l-15 {
+	margin-left: 0.37rem;
+}
+
+.p-t-10 {
+	padding-top: 0.25rem;
+}
+
+.bg-white {
+	background: #fff;
+	height: 100%;
+}
+
+.bg-green {
+	background: #66c101;
+}
+
+.bg-warning {
+	background: #fd8a1d;
+}
+
+.bg-purple-red {
+	background: #e440a1;
+}
+
+.bg-primary {
+	background: #478bda;
+}
+
+.bg-yellow {
+	background: #ffc631;
+}
+
+.bg-success {
+	background: #08c29a;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.mui-content-padded30 {
+	margin: 0.75rem;
+}
+
+.mui-sm-btn {
+	padding: 0.2rem 0.8rem
+}
+
+.mui-table-view.no-margin {
+	margin: 0;
+}
+
+.no-border {
+	border: 0;
+}
+
+.no-border:before,
+.no-border:after {
+	height: 0;
+}
+.banner{
+	width:100%;
+	height:3rem;
+}
+.gywm {
+	width: 100%;
+	height:6.5rem;
+	margin-bottom:0.5rem;
+}
+.gywm img{
+	width:100%;
+	height:100%;
+}
+
+.gywmWrap {
+	padding: 0.125rem 0.375rem;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.gywmInfo h2,
+.gywmInfo h5,
+.gywmInfo p {
+	margin-bottom: 0.45rem;
+}
+
+.gywmInfo h2 {
+	color: #fd5f10;
+	font-size: 0.45rem;
+	font-weight: 500;
+}
+
+.gywmInfo h5 {
+	color: #ffa120;
+	font-size: 0.375rem;
+	font-weight: 500;
+}
+
+.gywmInfo p {
+	line-height: 0.65rem;
+	color: #707070;
+	font-size: 0.35rem;
+}
+
+.gywmInfo p span {
+	color: #333;
+}
+
+.buy-app .media-item {
+	text-align: center;
+	width: 1.42rem;
+	height: 1.45rem;
+	line-height: 1.45rem;
+	border-radius: 0.12rem;
+	color: #fff;
+	font-size: 0.9rem;
+}
+
+.media-title {
+	font-size: 0.4rem;
+	margin: 0;
+}
+
+.money {
+	position: absolute;
+	right: 0.3rem;
+	top: 0.75rem;
+}
+
+.pay-tip {
+	position: fixed;
+	bottom: 1.25rem;
+	width: 100%;
+	text-align: center;
+}
+
+.mui-input-row.mui-navigate-right {
+	padding-right: 0.3rem;
+}
+
+.mui-input-row .mui-navigate-right input[type="text"] {
+	padding-right: 0.75rem;
+}
+
+.mui-table-view.order-lst {
+	overflow: hidden;
+	background: #efeff4;
+}
+.mui-table-view.order-lst .mui-media-body{
+	height:1.75rem;
+}
+.mui-table-view.order-lst .mui-table-view-cell:last-child:after {
+	height: 0.02rem;
+}
+
+.mui-table-view.order-lst .mui-table-view-cell:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 0.05rem;
+	background: #ff4549;
+}
+
+.pay-success {
+	padding: 1rem 0 0.37rem;
+}
+
+.pay-success img{
+	width:1.25rem;
+	height:1.25rem;
+}
+
+.mui-table-view.order-lst .mui-table-view-cell {
+	margin-top: 0.17rem;
+	background: #fff;
+}
+
+.mui-table-view.order-lst .mui-table-view-cell:before {
+	height: 0.02rem;
+	background: #e2e2e2;
+}
+
+.order-btn {
+	border-top: 0.02rem solid #e2e2e2;
+	padding-top: 0.25rem;
+}
+
+.order-btn .mui-btn {
+	padding: 0.12rem 0.37rem;
+}
+
+.order-lst p,
+.order-info p {
+	margin-bottom: 0.3rem;
+}
+
+.order-info p:last-child,
+.calcbox p:last-child,
+.power-lst p:last-child {
+	margin-bottom: 0;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted.flag-false .mui-control-item.mui-active {
+	color: #979797;
+	border-bottom-color: #979797;
+}
+
+.region-box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	background: #ededed;
+	padding: 0.25rem;
+}
+
+.region-box .region-item {
+	flex: 0 0 12.5%;
+	padding: 0.1rem;
+}
+
+.region-box .region-item a {
+	display: block;
+	margin-top: 0.05rem;
+	line-height: 0.8rem;
+	background: #fff;
+	box-shadow: 0.05rem 0.05rem 0.05rem #888888;
+	border-radius: 0.1rem;
+	font-size: 0.35rem;
+	text-align: center;
+}
+
+.mui-input-group .mui-input-row.upload-box {
+	height: 1.9rem;
+}
+
+.mui-input-group .mui-input-row.upload-box label {
+	line-height: 1rem;
+}
+
+.upload-img {
+	float: right;
+	width: 2.25rem;
+	height: 1.6rem;
+	margin-right: 0.37rem;
+	margin-top: 0.15rem;
+	border: 0.02rem dashed #e8e8e8;
+	text-align: center;
+}
+
+.image-item {
+	float: right;
+	margin-top: 0.15rem;
+	margin-right: 0.2rem;
+	width: 2rem;
+	height: 1.6rem;
+}
+
+.image-item img {
+	width: 100%;
+	height: 100%;
+}
+
+.upload-img img {
+	width:0.75rem;
+	height:0.75rem;
+	margin: 0.15rem 0 0;
+}
+.upload-img p{
+	margin-top:-0.12rem;
+}
+
+.mui-input-row .mui-btn.region-btn {
+	float: right!important;
+	margin-top: 0.3rem;
+	height: 0.68rem;
+	padding:0.15rem;
+	background: #e9f7fb;
+	color: #333;
+	font-size: 0.4rem;
+	border: none;
+}
+
+.mui-preview-image.mui-fullscreen {
+	position: fixed;
+	z-index: 20;
+	background-color: #000;
+}
+
+.mui-preview-header,
+.mui-preview-footer {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	z-index: 10;
+}
+
+.mui-preview-header {
+	height: 44px;
+	top: 0;
+}
+
+.mui-preview-footer {
+	height: 50px;
+	bottom: 0px;
+}
+
+.mui-preview-header .mui-preview-indicator {
+	display: block;
+	line-height: 25px;
+	color: #fff;
+	text-align: center;
+	margin: 15px auto 4;
+	width: 70px;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 12px;
+	font-size: 16px;
+}
+
+.mui-preview-image {
+	display: none;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.mui-preview-image.mui-preview-in {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+.mui-preview-image.mui-preview-out {
+	background: none;
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+
+.mui-preview-image.mui-preview-out .mui-preview-header,
+.mui-preview-image.mui-preview-out .mui-preview-footer {
+	display: none;
+}
+
+.mui-zoom-scroller {
+	position: absolute;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	-webkit-backface-visibility: hidden;
+}
+
+.mui-zoom {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.mui-slider .mui-slider-group .mui-slider-item img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+	width: 100%;
+}
+
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+	display: inline-table;
+}
+
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.mui-preview-loading {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.mui-preview-loading.mui-active {
+	display: block;
+}
+
+.mui-preview-loading .mui-spinner-white {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: -25px;
+	height: 50px;
+	width: 50px;
+}
+
+.mui-preview-image img.mui-transitioning {
+	-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+	transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+p img {
+	max-width: 100%;
+	height: auto;
+}
+.total-money{
+	padding:0 0.37rem;
+	text-align: right;
+}
+.total-money a{
+	color:#333;
+	font-size:0.37rem;
+	line-height: 1.25rem;
+}
+.total-money img{
+	width:0.6rem;
+	height:0.6rem;
+	position: relative;
+	top:0.12rem;
+}
+.price-list .mui-table-view-cell{
+	padding:0.12rem 0.3rem;
+}
+.no-order{
+	padding:1.5rem 0;
+	margin-top:0.2rem;
+	background:#fff;
+	text-align: center;
+}
+.img-info p{
+	line-height: 1rem;
+}
+.img-info img{
+	width:1.5rem;
+	height:1rem;
+}
+.errorPage{
+	text-align: center;
+	background:#fff;
+	padding:1rem 0 2rem;
+}
+.errorPage img{
+	width:8rem;
+}

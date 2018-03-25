@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta content="telephone=no,email=no" name="format-detection">
+		<script src="js/flexible.js"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link href="css/mui.picker.css" rel="stylesheet" />
+		<link href="css/mui.dtpicker.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div style="border-bottom: 1px solid #e2e2e2;;" id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary">
+				<a class="mui-control-item mui-active" href="#item1">
+					全部
+				</a>
+				<a class="mui-control-item" href="#item2">
+					待支付
+				</a>
+				<a class="mui-control-item" href="#item3">
+					办理中
+				</a>
+				<a class="mui-control-item" href="#item4">
+					待确认
+				</a>
+			</div>
+			<!--全部开始-->
+			<div id="item1" class="mui-control-content mui-active">
+				<ul class="mui-table-view no-margin no-spacing order-lst">
+					<li class="mui-table-view-cell mui-media">
+						<a href="订单详情.html">
+							<img class="mui-media-object mui-pull-left" src="images/img.jpg">
+							<div class="mui-media-body">
+								<p class="text-grey mui-h6">
+									<span class="text-muted">罚单编号：</span>
+									<span>930333330303</span>
+									<span class="mui-pull-right mui-h5 text-red">待支付</span>
+								</p>
+								<p class="mui-h6 text-grey">
+									<span class="text-muted">罚单日期：</span>
+									<span>2016-12-09</span>
+									<span class="mui-pull-right mui-h4 mui-text-black">¥260</span>
+								</p>
+							</div>
+						</a>
+						<div class="order-btn mui-text-right">
+							<a class="mui-btn mui-btn-default mui-btn-outlined" href="delete-order">删除订单</a>
+							<a class="mui-btn mui-btn-primary" href="#">去支付</a>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="订单详情.html">
+							<img class="mui-media-object mui-pull-left" src="images/img.jpg">
+							<div class="mui-media-body">
+								<p class="text-grey mui-h6">
+									<span class="text-muted">罚单编号：</span>
+									<span>930333330303</span>
+									<span class="mui-pull-right mui-h5 text-success">微信支付</span>
+								</p>
+								<p class="mui-h6 text-grey">
+									<span class="text-muted">罚单日期：</span>
+									<span>2016-12-09</span>
+									<span class="mui-pull-right mui-h4 mui-text-black">¥260</span>
+								</p>
+							</div>
+						</a>
+						<div class="order-btn mui-text-right">
+							<a class="mui-btn mui-btn-default mui-btn-outlined" href="delete-order">删除订单</a>
+							<a class="mui-btn mui-btn-primary" href="#">查看订单</a>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="订单详情.html">
+							<img class="mui-media-object mui-pull-left" src="images/img.jpg">
+							<div class="mui-media-body">
+								<p class="text-grey mui-h6">
+									<span class="text-muted">罚单编号：</span>
+									<span>930333330303</span>
+									<span class="mui-pull-right mui-h5 text-warning">待确认</span>
+								</p>
+								<p class="mui-h6 text-grey">
+									<span class="text-muted">罚单日期：</span>
+									<span>2016-12-09</span>
+									<span class="mui-pull-right mui-h4 mui-text-black">¥260</span>
+								</p>
+							</div>
+						</a>
+						<div class="order-btn mui-text-right">
+							<a class="mui-btn mui-btn-default mui-btn-outlined" href="delete-order">删除订单</a>
+							<a class="mui-btn mui-btn-primary" href="#">撤销订单</a>
+						</div>
+					</li>
+				</ul>
+				<!--没有订单开始-->
+				<div class="no-order" style="display:none;">
+					<img src="images/no-order.png" width="75" alt="" />
+					<h4 class="text-muted">没有找到相关的订单</h4>
+				</div>
+				<!--没有订单结束-->
+			</div>
+			<!--全部结束-->
+			<!--待支付开始-->
+			<div id="item2" class="mui-control-content">
+				<ul class="mui-table-view no-margin no-spacing order-lst">
+					<li class="mui-table-view-cell mui-media">
+						<a href="订单详情.html">
+							<img class="mui-media-object mui-pull-left" src="images/img.jpg">
+							<div class="mui-media-body">
+								<p class="text-grey mui-h6">
+									<span class="text-muted">罚单编号：</span>
+									<span>930333330303</span>
+									<span class="mui-pull-right mui-h5 text-red">待支付</span>
+								</p>
+								<p class="mui-h6 text-grey">
+									<span class="text-muted">罚单日期：</span>
+									<span>2016-12-09</span>
+									<span class="mui-pull-right mui-h4 mui-text-black">¥260</span>
+								</p>
+							</div>
+						</a>
+						<div class="order-btn mui-text-right">
+							<a class="mui-btn mui-btn-default mui-btn-outlined" href="delete-order">删除订单</a>
+							<a class="mui-btn mui-btn-primary" href="#">去支付</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--待支付结束-->
+			<!--办理中开始-->
+			<div id="item3" class="mui-control-content">
+				<ul class="mui-table-view no-margin no-spacing order-lst">
+					<li class="mui-table-view-cell mui-media">
+						<a href="订单详情.html">
+							<img class="mui-media-object mui-pull-left" src="images/img.jpg">
+							<div class="mui-media-body">
+								<p class="text-grey mui-h6">
+									<span class="text-muted">罚单编号：</span>
+									<span>930333330303</span>
+									<span class="mui-pull-right mui-h5 text-success">微信支付</span>
+								</p>
+								<p class="mui-h6 text-grey">
+									<span class="text-muted">罚单日期：</span>
+									<span>2016-12-09</span>
+									<span class="mui-pull-right mui-h4 mui-text-black">¥260</span>
+								</p>
+							</div>
+						</a>
+						<div class="order-btn mui-text-right">
+							<a class="mui-btn mui-btn-default mui-btn-outlined" href="delete-order">删除订单</a>
+							<a class="mui-btn mui-btn-primary" href="#">查看订单</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--办理中结束-->
+			<!--待确认开始-->
+			<div id="item4" class="mui-control-content">
+				<ul class="mui-table-view no-margin no-spacing order-lst">
+					<li class="mui-table-view-cell mui-media">
+						<a href="订单详情.html">
+							<img class="mui-media-object mui-pull-left" src="images/img.jpg">
+							<div class="mui-media-body">
+								<p class="text-grey mui-h6">
+									<span class="text-muted">罚单编号：</span>
+									<span>930333330303</span>
+									<span class="mui-pull-right mui-h5 text-warning">待确认</span>
+								</p>
+								<p class="mui-h6 text-grey">
+									<span class="text-muted">罚单日期：</span>
+									<span>2016-12-09</span>
+									<span class="mui-pull-right mui-h4 mui-text-black">¥260</span>
+								</p>
+							</div>
+						</a>
+						<div class="order-btn mui-text-right">
+							<a class="mui-btn mui-btn-default mui-btn-outlined" href="delete-order">删除订单</a>
+							<a class="mui-btn mui-btn-primary" href="#">撤销订单</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--待确认结束-->
+		</div>
+		<!--删除订单提示-->
+		<div id="delete-order" class="mui-popover mui-popover-action mui-popover-bottom" style="width:80%;margin-left:10%;">
+			<div class="mui-popup-inner mui-text-center">
+				<div class="mui-popup-text">删除订单后不能恢复，确认删除？</div>
+			</div>
+			<div class="mui-popup-buttons">
+				<a href="#delete-order" class="mui-popup-button text-muted">取消</a>
+				<a href="#delete-order" class="mui-popup-button text-warning">确定</a>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jQuery-2.1.4.min.js"></script>
+	</body>
+
+</html>

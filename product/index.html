@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>新增部门</title>
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta content="telephone=no,email=no" name="format-detection">
+		<script src="js/flexible.js"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link href="css/mui.picker.css" rel="stylesheet" />
+		<link href="css/mui.poppicker.css" rel="stylesheet" />
+		<link href="css/mui.dtpicker.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div class="banner">
+				<img width="100%" height="100%" src="images/banner.png" alt="" />
+			</div>
+			<form class="mui-input-group no-spacing">
+				<div class="mui-input-row">
+					<label>罚单编号</label>
+					<input class="mui-text-right" type="text" placeholder="请输入罚单编号">
+				</div>
+				<div class="mui-input-row" id='showRegion'>
+					<label>车牌号</label>
+					<input style="width:40%;float:right;" class="mui-text-right" type="text" placeholder="请输入车牌号">
+					<a class="mui-btn mui-btn-primary mui-right region-btn mui-icon mui-icon-arrowdown">京</a>
+				</div>
+				<div class="mui-input-row">
+					<label>罚单日期</label>
+					<input data-options='{"type":"date"}' class="dates mui-text-right" value="" type="text" readonly placeholder="请选择罚单日期" />
+					<!--<button id='demo4' data-options='{"type":"date"}' class="dates mui-text-right" type="button">请选择罚单日期 </button>-->
+				</div>
+				<div class="mui-input-row">
+					<label>罚单金额</label>
+					<input class="mui-text-right" type="text" placeholder="请输入罚单金额">
+				</div>
+				<div class="mui-input-row upload-box">
+					<label>罚单照片</label>
+					<div id='upload' class="upload-img">
+						<img src="images/upload.png" alt="" />
+						<p class="mui-text-muted">上传照片</p>
+					</div>
+					<div class="image-item">
+						<img id="head-img" src="images/img.jpg"  data-preview-src="" data-preview-group="1" />
+					</div>
+				</div>
+				<div class="mui-input-row">
+					<label>联系方式</label>
+					<input class="mui-text-right" type="text" placeholder="请输入手机号">
+				</div>
+				<div class="mui-input-row">
+					<label>姓名</label>
+					<input class="mui-text-right" type="text" placeholder="请输入姓名">
+				</div>
+				<div class="mui-input-row total-money">
+					<a href="#priceDetail">订单总额：260元  <img src="images/icon.png" alt="" /></a>
+				</div>
+			</form>
+			<div class="mui-content-padded30 mui-text-center">
+				<a href="#" class="mui-btn mui-sm-btn mui-btn-default">重置</a>
+				<a href="#" class="mui-btn mui-sm-btn mui-btn-primary m-l-15">提交</a>
+			</div>
+		</div>
+		<!--总金额弹出框-->
+		<div id="priceDetail" class="mui-popover mui-popover-bottom" style="height:3.87rem">
+			<div class="mui-popover-arrow"></div>
+			<ul class="mui-table-view price-list m-t-5">
+				<li class="mui-table-view-cell">罚单金额：200元</li>
+				<li class="mui-table-view-cell">滞纳金：200元</li>
+				<li class="mui-table-view-cell">手续费：10元</li>
+				<li class="mui-table-view-cell">滞纳金说明：15天以后每天产生百分之三的滞纳金</li>
+			</ul>
+		</div>
+		<!--选择自治区开始-->
+		<div id="region" class="mui-popover mui-popover-action mui-popover-bottom">
+			<div class="region-box">
+				<div class="region-item">
+					<a onclick="selected(this);">京</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">沪</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">浙</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">苏</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">粤</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">鲁</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">晋</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">冀</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">豫</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">川</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">渝</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">辽</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">吉</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">黑</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">皖</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">鄂</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">津</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">贵</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">云</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">桂</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">琼</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">青</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">新</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">藏</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">蒙</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">宁</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">甘</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">陕</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">闽</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">赣</a>
+				</div>
+				<div class="region-item">
+					<a onclick="selected(this);">湘</a>
+				</div>
+			</div>
+		</div>
+		<!--选择状态结束-->
+		<script src="js/mui.min.js"></script>
+		<script src="js/jQuery-2.1.4.min.js"></script>
+		<script src="js/mui.picker.js"></script>
+		<script src="js/mui.poppicker.js"></script>
+		<script src="js/mui.dtpicker.js"></script>
+		<script src="js/mui.zoom.js"></script>
+		<script src="js/mui.previewimage.js"></script>
+		<!--<script src='js/feedback.js'></script>-->
+		<script>
+			mui('#showRegion').on('tap', 'a', function() {
+				mui('#region').popover('show');
+			});
+			function selected(obj){
+				$("#showRegion").find("a").text($(obj).text());
+				mui('#region').popover('hide');
+			}
+		</script>
+		<script>
+			//日期弹出框
+			(function($) {
+				$.init();
+				var btns = $('.dates');
+				btns.each(function(i, btn) {
+					var that = this;
+					btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						/*
+						 * 首次显示时实例化组件
+						 * 示例为了简洁，将 options 放在了按钮的 dom 上
+						 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+						 */
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							/*
+							 * rs.value 拼合后的 value
+							 * rs.text 拼合后的 text
+							 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+							 * rs.m 月，用法同年
+							 * rs.d 日，用法同年
+							 * rs.h 时，用法同年
+							 * rs.i 分（minutes 的第二个字母），用法同年
+							 */
+							that.value = rs.text;
+							/* 
+							 * 返回 false 可以阻止选择框的关闭
+							 * return false;
+							 */
+							/*
+							 * 释放组件资源，释放后将将不能再操作组件
+							 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+							 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+							 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+							 */
+							picker.dispose();
+						});
+					}, false);
+				});
+			})(mui);
+			//上传照片
+			mui(".upload-box").on("tap", "#upload", function(e) {
+				if(mui.os.plus) {
+					var a = [{
+						title: "拍照"
+					}, {
+						title: "从手机相册选择"
+					}];
+					plus.nativeUI.actionSheet({
+						cancel: "取消",
+						buttons: a
+					}, function(b) {
+						switch(b.index) {
+							case 0:
+								break;
+							case 1:
+								getImage();
+								break;
+							case 2:
+								galleryImg();
+								break;
+							default:
+								break
+						}
+					})
+				}
+
+			});
+
+			function getImage() {
+				var c = plus.camera.getCamera();
+				c.captureImage(function(e) {
+					plus.io.resolveLocalFileSystemURL(e, function(entry) {
+						var s = entry.toLocalURL() + "?version=" + new Date().getTime();
+						console.log(s);
+						document.getElementById("head-img").src = s;
+						//变更大图预览的src
+						//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+//						document.querySelector("#__mui-imageview__group .mui-slider-item img").src = s + "?version=" + new Date().getTime();;;
+					}, function(e) {
+						console.log("读取拍照文件错误：" + e.message);
+					});
+				}, function(s) {
+					console.log("error" + s);
+				}, {
+					filename: "_doc/head.jpg"
+				})
+			}
+
+			function galleryImg() {
+				plus.gallery.pick(function(a) {
+					plus.io.resolveLocalFileSystemURL(a, function(entry) {
+						plus.io.resolveLocalFileSystemURL("_doc/", function(root) {
+							root.getFile("head.jpg", {}, function(file) {
+								//文件已存在
+								file.remove(function() {
+									console.log("file remove success");
+									entry.copyTo(root, 'head.jpg', function(e) {
+										
+											var e = e.fullPath + "?version=" + new Date().getTime();
+											console.log(e);
+											
+											console.log(document.getElementById("head-img"))
+											document.getElementById("head-img").src = e;
+											//变更大图预览的src
+											//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+//											document.querySelector("#__mui-imageview__group .mui-slider-item img").src = e + "?version=" + new Date().getTime();;
+										},
+										function(e) {
+											console.log('copy image fail:' + e.message);
+										});
+								}, function() {
+									console.log("delete image fail:" + e.message);
+								});
+							}, function() {
+								//文件不存在
+								entry.copyTo(root, 'head.jpg', function(e) {
+										var path = e.fullPath + "?version=" + new Date().getTime();
+										document.getElementById("head-img").src = path;
+										//变更大图预览的src
+										//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+//										document.querySelector("#__mui-imageview__group .mui-slider-item img").src = path;
+									},
+									function(e) {
+										console.log('copy image fail:' + e.message);
+									});
+							});
+						}, function(e) {
+							console.log("get _www folder fail");
+						})
+					}, function(e) {
+						console.log("读取拍照文件错误：" + e.message);
+					});
+				}, function(a) {}, {
+					filter: "image"
+				})
+			};
+			mui.previewImage();
+		</script>
+	</body>
+
+</html>
