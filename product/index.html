@@ -198,7 +198,7 @@
 		<script src="js/mui.dtpicker.js"></script>
 		<script src="js/mui.zoom.js"></script>
 		<script src="js/mui.previewimage.js"></script>
-		<script src='js/feedback.js'></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 		<script>
 			mui.init();
 			mui('#showRegion').on('tap', 'a', function() {
@@ -208,6 +208,17 @@
 				$("#showRegion").find("a").text($(obj).text());
 				mui('#region').popover('hide');
 			}
+			wx.config({
+                debug: true, //调试阶段建议开启
+                appId: "wx6d7914bee515b59e",//APPID
+                timestamp: "1522104792",//上面main方法中拿到的时间戳timestamp
+                nonceStr: "hcIGTAdjOtdXDhf4",//上面main方法中拿到的随机数nonceStr
+                signature: "9d089e46d9cb26d087d227424d7eb209b5b78ee1",//上面main方法中拿到的签名signature
+                jsApiList: [
+                    //所有要调用的 API 都要加到这个列表中
+                    "chooseImage"//从本地的相册、图库选择图片
+                ]
+            });
 		</script>
 		<script>
 			//日期弹出框
@@ -282,26 +293,37 @@
 //			});
 
 			function getImage() {
-				mui.plusReady(function(){
-             // 在这里调用plus api
-					var c = mui.os.plus.camera.getCamera();
-					c.captureImage(function(e) {
-						mui.os.plus.io.resolveLocalFileSystemURL(e, function(entry) {
-							var s = entry.toLocalURL() + "?version=" + new Date().getTime();
-							console.log(s);
-							document.getElementById("head-img").src = s;
-							//变更大图预览的src
-							//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
-	//						document.querySelector("#__mui-imageview__group .mui-slider-item img").src = s + "?version=" + new Date().getTime();;;
-						}, function(e) {
-							console.log("读取拍照文件错误：" + e.message);
-						});
-					}, function(s) {
-						console.log("error" + s);
-					}, {
-						filename: "_doc/head.jpg"
-					})
+				alert(1)
+            	wx.chooseImage({
+					count: 1, // 默认9
+					sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+					sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+					success: function (res) {
+						var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+						alert(JSON.stringify(localIds));
+						document.getElementById("head-img").src = localIds[0].localId;
+					}
 				});
+	// 			mui.plusReady(function(){
+    //          // 在这里调用plus api
+	// 				var c = mui.os.plus.camera.getCamera();
+	// 				c.captureImage(function(e) {
+	// 					mui.os.plus.io.resolveLocalFileSystemURL(e, function(entry) {
+	// 						var s = entry.toLocalURL() + "?version=" + new Date().getTime();
+	// 						console.log(s);
+	// 						document.getElementById("head-img").src = s;
+	// 						//变更大图预览的src
+	// 						//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+	// //						document.querySelector("#__mui-imageview__group .mui-slider-item img").src = s + "?version=" + new Date().getTime();;;
+	// 					}, function(e) {
+	// 						console.log("读取拍照文件错误：" + e.message);
+	// 					});
+	// 				}, function(s) {
+	// 					console.log("error" + s);
+	// 				}, {
+	// 					filename: "_doc/head.jpg"
+	// 				})
+	// 			});
 			}
 
 			function galleryImg() {
